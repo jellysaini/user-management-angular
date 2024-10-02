@@ -1,0 +1,11 @@
+<p>Please note that we store your data in compliance with GDPR. You can request the deletion of your data at any time.</p>
+<form [formGroup]="userForm" (ngSubmit)="addUser()">
+    <input formControlName="name" placeholder="Name" required>
+    <input formControlName="email" placeholder="Email" required type="email">
+    <button type="submit">Add User</button>
+</form>
+  
+  <h3>User List</h3>
+  <ul>
+    <li *ngFor="let user of users">{{ user.name }} - {{ user.email }}</li>
+  </ul>
